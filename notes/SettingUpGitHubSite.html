@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Setting Up My Github Site</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2011-05-03 Tue"/>
+<meta name="author" content="TeAmigo"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Setting Up My Github Site</h1>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">- - Sites </a>
+<ul>
+<li><a href="#sec-1_1">http://pages.github.com/ - Home page for Github pages </a></li>
+<li><a href="#sec-1_2">http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.php  - publishing org-mode to html tutorial </a></li>
+<li><a href="#sec-1_3">https://github.com/bmaland/happyblogger - good example org pages site </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">-Setup a GitHub site </a>
+<ul>
+<li><a href="#sec-2_1">Where to start? - It seems that using org files is a good idea </a>
+<ul>
+<li><a href="#sec-2_1_1">static pages easily moved anywhere </a></li>
+<li><a href="#sec-2_1_2">Really good example is at https://github.com/bmaland/happyblogger#readme </a>
+<ul>
+<li><a href="#sec-2_1_2_1">Step 1: write org pages and html export them </a>
+<ul>
+<li><a href="#sec-2_1_2_1_1">-  Work through http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.php </a></li>
+<li><a href="#sec-2_1_2_1_2">org-publish-project-alist is important var, here is how I have it right now </a></li>
+<li><a href="#sec-2_1_2_1_3">org-export-html-style-include-default is set to nil, </a>
+<ul>
+<li><a href="#sec-2_1_2_1_3_1">:style-include-default t in the definition of org-publish-project-alist also can set this </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_2_1_4">set org-export-html-style to </a>
+<ul>
+<li><a href="#sec-2_1_2_1_4_1">&lt;link rel="stylesheet" type="text/css" href="/home/rickcharon/org/css/stylesheet.css"&gt; </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_2_1_5">M-x customize-variable RET org-export-html-style-include-scripts set to nil to get rid of  uneeded script </a>
+<ul>
+<li><a href="#sec-2_1_2_1_5_1">Can also turn off with :style-include-scripts nil in org-publish-project-alist </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_2_1_6">Useful sites for help: </a>
+<ul>
+<li><a href="#sec-2_1_2_1_6_1">http://thread.gmane.org/gmane.emacs.orgmode/ also http://search.gmane.org/ gmane.org is very large lists </a></li>
+<li><a href="#sec-2_1_2_1_6_2">http://www.mail-archive.com/emacs-orgmode@gnu.org/info.html </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_2_1_7">Copying http://orgmode.org/worg/style/worg.css </a></li>
+<li><a href="#sec-2_1_2_1_8">- - Work on file:/share/html/org-publish-html-tutorial.html and its files </a>
+<ul>
+<li><a href="#sec-2_1_2_1_8_1">- - Check out file:css/stylesheet.css::#table-of-contents, pops out the </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_2_1_9">- - Stop the numbers in the sections </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_2_2">Step 2: run Jeykll to generate final site </a>
+<ul>
+<li><a href="#sec-2_1_2_2_1">- - Learn Jekyll </a>
+<ul>
+<li><a href="#sec-2_1_2_2_1_1">Reading through https://github.com/mojombo/jekyll/wiki/usage and looking at </a></li>
+<li><a href="#sec-2_1_2_2_1_2">https://github.com/mojombo/jekyll/wiki/Sites some notables </a></li>
+<li><a href="#sec-2_1_2_2_1_3">https://github.com/raphinou/jekyll-base is cool, lots of added css and js </a></li>
+<li><a href="#sec-2_1_2_2_1_4">jekyll &ndash;server to actually create the <sub>site</sub> dir, and then localhost:4000 is where it is viewable </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_2_3">Step 3: push it to GitHub - this is from http://orgmode.org/worg/org-tutorials/org-jekyll.html </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_1_3">- - https://github.com/mojombo/jekyll/wiki/usage </a>
+<ul>
+<li><a href="#sec-2_1_3_1">https://github.com/mojombo/jekyll/wiki/Sites </a></li>
+<li><a href="#sec-2_1_3_2">https://github.com/bmaland/happyblogger </a></li>
+<li><a href="#sec-2_1_3_3">http://orgmode.org/worg/org-tutorials/org-jekyll.html </a></li>
+<li><a href="#sec-2_1_3_4">-http://www.emacswiki.org/emacs/org-blog.el check this out - </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="todo REFERENCES"> REFERENCES</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-04-04 Mon 14:02</span></span> - Sites </h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1_1" class="outline-3">
+<h3 id="sec-1_1"><a href="http://pages.github.com/">http://pages.github.com/</a> - Home page for Github pages </h3>
+<div class="outline-text-3" id="text-1_1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1_2" class="outline-3">
+<h3 id="sec-1_2"><a href="http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.php">http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.php</a>  - publishing org-mode to html tutorial </h3>
+<div class="outline-text-3" id="text-1_2">
+
+</div>
+
+</div>
+
+<div id="outline-container-1_3" class="outline-3">
+<h3 id="sec-1_3"><a href="https://github.com/bmaland/happyblogger">https://github.com/bmaland/happyblogger</a> - good example org pages site </h3>
+<div class="outline-text-3" id="text-1_3">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="todo TODO"> TODO</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-04-25 Mon 13:08</span></span>Setup a GitHub site<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup> </h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1">Where to start? - It seems that using org files is a good idea </h3>
+<div class="outline-text-3" id="text-2_1">
+
+
+</div>
+
+<div id="outline-container-2_1_1" class="outline-4">
+<h4 id="sec-2_1_1">static pages easily moved anywhere </h4>
+<div class="outline-text-4" id="text-2_1_1">
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2" class="outline-4">
+<h4 id="sec-2_1_2">Really good example is at <a href="https://github.com/bmaland/happyblogger#readme">https://github.com/bmaland/happyblogger#readme</a> </h4>
+<div class="outline-text-4" id="text-2_1_2">
+
+
+
+</div>
+
+<div id="outline-container-2_1_2_1" class="outline-5">
+<h5 id="sec-2_1_2_1">Step 1: write org pages and html export them </h5>
+<div class="outline-text-5" id="text-2_1_2_1">
+
+<ul>
+<li id="sec-2_1_2_1_1">Command to do the publish "M-x org-publish-project" <br/>
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-2_1_2_1_1" class="outline-6">
+<h6 id="sec-2_1_2_1_1"><span class="done DONE"> DONE</span> -  Work through <a href="http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.php">http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.php</a> </h6>
+<div class="outline-text-6" id="text-2_1_2_1_1">
+
+<p>           <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2011-04-30 Sat 15:11</span></span><br/>
+</p></div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_2" class="outline-6">
+<h6 id="sec-2_1_2_1_2">org-publish-project-alist is important var, here is how I have it right now </h6>
+<div class="outline-text-6" id="text-2_1_2_1_2">
+
+
+
+
+<pre class="src src-emacs-lisp">(setq org-publish-project-alist
+      '(
+        (<span style="color: #bc8f8f;">"org-notes"</span>
+         <span style="color: #da70d6;">:base-directory</span> <span style="color: #bc8f8f;">"~/org/"</span>
+         <span style="color: #da70d6;">:auto-sitemap</span> t
+         <span style="color: #da70d6;">:base-extension</span> <span style="color: #bc8f8f;">"org"</span>
+         <span style="color: #da70d6;">:index-filename</span> <span style="color: #bc8f8f;">"index.org"</span>
+         <span style="color: #da70d6;">:index-title</span> <span style="color: #bc8f8f;">"Index"</span>
+         <span style="color: #da70d6;">:publishing-directory</span> <span style="color: #bc8f8f;">"~/public_html/"</span>
+         <span style="color: #da70d6;">:recursive</span> t
+         <span style="color: #da70d6;">:num</span> nil
+         <span style="color: #da70d6;">:publishing-function</span> org-publish-org-to-html
+         <span style="color: #da70d6;">:headline-levels</span> 6            <span style="color: #b22222;">; </span><span style="color: #b22222;">Just the default for this project.
+</span>         <span style="color: #da70d6;">:auto-preamble</span> t
+         <span style="color: #da70d6;">:author</span> <span style="color: #bc8f8f;">"TeAmigo"</span>
+         
+         )
+        (<span style="color: #bc8f8f;">"org-static"</span>
+         <span style="color: #da70d6;">:base-directory</span> <span style="color: #bc8f8f;">"~/org/"</span>
+         <span style="color: #da70d6;">:base-extension</span> <span style="color: #bc8f8f;">"css</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">js</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">png</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">jpg</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">gif</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">pdf</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">mp3</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">ogg</span><span style="color: #bc8f8f; font-weight: bold;">\\</span><span style="color: #bc8f8f; font-weight: bold;">|</span><span style="color: #bc8f8f;">swf"</span>
+         <span style="color: #da70d6;">:publishing-directory</span> <span style="color: #bc8f8f;">"~/public_html/"</span>
+         <span style="color: #da70d6;">:recursive</span> t
+         <span style="color: #da70d6;">:publishing-function</span> org-publish-attachment
+         )
+        (<span style="color: #bc8f8f;">"org"</span> <span style="color: #da70d6;">:components</span> (<span style="color: #bc8f8f;">"org-notes"</span> <span style="color: #bc8f8f;">"org-static"</span>))
+        ))
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_3" class="outline-6">
+<h6 id="sec-2_1_2_1_3">org-export-html-style-include-default is set to nil, </h6>
+<div class="outline-text-6" id="text-2_1_2_1_3">
+
+<p>          this keeps the default stuff from being inserted
+</p>
+</div>
+
+<div id="outline-container-2_1_2_1_3_1" class="outline-7">
+<h7 id="sec-2_1_2_1_3_1">:style-include-default t in the definition of org-publish-project-alist also can set this </h7>
+<div class="outline-text-7" id="text-2_1_2_1_3_1">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_4" class="outline-6">
+<h6 id="sec-2_1_2_1_4">set org-export-html-style to </h6>
+<div class="outline-text-6" id="text-2_1_2_1_4">
+
+
+</div>
+
+<div id="outline-container-2_1_2_1_4_1" class="outline-7">
+<h7 id="sec-2_1_2_1_4_1">&lt;link rel="stylesheet" type="text/css" href="/home/rickcharon/org/css/stylesheet.css"&gt; </h7>
+<div class="outline-text-7" id="text-2_1_2_1_4_1">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_5" class="outline-6">
+<h6 id="sec-2_1_2_1_5">M-x customize-variable RET org-export-html-style-include-scripts set to nil to get rid of  uneeded script </h6>
+<div class="outline-text-6" id="text-2_1_2_1_5">
+
+
+</div>
+
+<div id="outline-container-2_1_2_1_5_1" class="outline-7">
+<h7 id="sec-2_1_2_1_5_1">Can also turn off with :style-include-scripts nil in org-publish-project-alist </h7>
+<div class="outline-text-7" id="text-2_1_2_1_5_1">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_6" class="outline-6">
+<h6 id="sec-2_1_2_1_6">Useful sites for help: </h6>
+<div class="outline-text-6" id="text-2_1_2_1_6">
+
+
+</div>
+
+<div id="outline-container-2_1_2_1_6_1" class="outline-7">
+<h7 id="sec-2_1_2_1_6_1"><a href="http://thread.gmane.org/gmane.emacs.orgmode/">http://thread.gmane.org/gmane.emacs.orgmode/</a> also http://search.gmane.org/ gmane.org is very large lists </h7>
+<div class="outline-text-7" id="text-2_1_2_1_6_1">
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_6_2" class="outline-7">
+<h7 id="sec-2_1_2_1_6_2"><a href="http://www.mail-archive.com/emacs-orgmode@gnu.org/info.html">http://www.mail-archive.com/emacs-orgmode@gnu.org/info.html</a> </h7>
+<div class="outline-text-7" id="text-2_1_2_1_6_2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_7" class="outline-6">
+<h6 id="sec-2_1_2_1_7">Copying <a href="http://orgmode.org/worg/style/worg.css">http://orgmode.org/worg/style/worg.css</a> </h6>
+<div class="outline-text-6" id="text-2_1_2_1_7">
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_8" class="outline-6">
+<h6 id="sec-2_1_2_1_8"><span class="todo IN-PROGRESS"> IN_PROGRESS</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-04-25 Mon 18:28</span></span> - Work on <a href="file:///share/html/org-publish-html-tutorial.html">/share/html/org-publish-html-tutorial.html</a> and its files </h6>
+<div class="outline-text-6" id="text-2_1_2_1_8">
+
+
+</div>
+
+<div id="outline-container-2_1_2_1_8_1" class="outline-7">
+<h7 id="sec-2_1_2_1_8_1"><span class="done DONE"> DONE</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-04-29 Fri 18:27</span></span> - Check out <a href="css/stylesheet.css#table-of-contents">css/stylesheet.css::#table-of-contents</a>, pops out the </h7>
+<div class="outline-text-7" id="text-2_1_2_1_8_1">
+
+<p>            Table of Contents
+             <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2011-04-30 Sat 13:44</span></span> Popping out the table of contents just like it, copied worg.css
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_1_9" class="outline-6">
+<h6 id="sec-2_1_2_1_9"><span class="done DONE"> DONE</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-04-30 Sat 13:45</span></span> - Stop the numbers in the sections </h6>
+<div class="outline-text-6" id="text-2_1_2_1_9">
+
+<p>           <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2011-04-30 Sat 13:51</span></span> org-export-with-section-numbers var customized to nil
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_2" class="outline-5">
+<h5 id="sec-2_1_2_2">Step 2: run Jeykll to generate final site </h5>
+<div class="outline-text-5" id="text-2_1_2_2">
+
+
+</div>
+
+<div id="outline-container-2_1_2_2_1" class="outline-6">
+<h6 id="sec-2_1_2_2_1"><span class="todo TODO"> TODO</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-04-29 Fri 13:04</span></span> - Learn Jekyll </h6>
+<div class="outline-text-6" id="text-2_1_2_2_1">
+
+
+</div>
+
+<div id="outline-container-2_1_2_2_1_1" class="outline-7">
+<h7 id="sec-2_1_2_2_1_1">Reading through <a href="https://github.com/mojombo/jekyll/wiki/usage">https://github.com/mojombo/jekyll/wiki/usage</a> and looking at </h7>
+<div class="outline-text-7" id="text-2_1_2_2_1_1">
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_2_1_2" class="outline-7">
+<h7 id="sec-2_1_2_2_1_2"><a href="https://github.com/mojombo/jekyll/wiki/Sites">https://github.com/mojombo/jekyll/wiki/Sites</a> some notables </h7>
+<div class="outline-text-7" id="text-2_1_2_2_1_2">
+
+<ul>
+<li id="sec-2_1_2_2_1_2_1"><a href="http://www.paperplanes.de/">http://www.paperplanes.de/</a> - source at https://github.com/mattmatt/paperplanes has top menu tabs <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_2_2_1_2_2"><a href="http://www.cyborginstitute.com/">http://www.cyborginstitute.com/</a> huge, has all sorts of stuff, amazing for static! <br/>
+<ul>
+<li id="sec-2_1_2_2_1_2_2_1"><a href="http://cyborginstitute.net/git/?p=cyborginstitute.com.git;a=summary">http://cyborginstitute.net/git/?p=cyborginstitute.com.git;a=summary</a> source <br/>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_2_1_3" class="outline-7">
+<h7 id="sec-2_1_2_2_1_3"><a href="https://github.com/raphinou/jekyll-base">https://github.com/raphinou/jekyll-base</a> is cool, lots of added css and js </h7>
+<div class="outline-text-7" id="text-2_1_2_2_1_3">
+
+<ul>
+<li id="sec-2_1_2_2_1_3_1"><a href="http://raphinou.github.com/jekyll-base/">http://raphinou.github.com/jekyll-base/</a> is docs <br/>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_2_1_4" class="outline-7">
+<h7 id="sec-2_1_2_2_1_4">jekyll &ndash;server to actually create the <sub>site</sub> dir, and then localhost:4000 is where it is viewable </h7>
+<div class="outline-text-7" id="text-2_1_2_2_1_4">
+
+<ul>
+<li id="sec-2_1_2_2_1_4_1">General usage at <a href="https://github.com/mojombo/jekyll/wiki/usage">https://github.com/mojombo/jekyll/wiki/usage</a> <br/>
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_2_3" class="outline-5">
+<h5 id="sec-2_1_2_3">Step 3: push it to GitHub - this is from <a href="http://orgmode.org/worg/org-tutorials/org-jekyll.html">http://orgmode.org/worg/org-tutorials/org-jekyll.html</a> </h5>
+<div class="outline-text-5" id="text-2_1_2_3">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_1_3" class="outline-4">
+<h4 id="sec-2_1_3"><span class="todo TODO"> TODO</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-03-14 Mon 16:43</span></span> - <a href="https://github.com/mojombo/jekyll/wiki/usage">https://github.com/mojombo/jekyll/wiki/usage</a> </h4>
+<div class="outline-text-4" id="text-2_1_3">
+
+
+</div>
+
+<div id="outline-container-2_1_3_1" class="outline-5">
+<h5 id="sec-2_1_3_1"><a href="https://github.com/mojombo/jekyll/wiki/Sites">https://github.com/mojombo/jekyll/wiki/Sites</a> </h5>
+<div class="outline-text-5" id="text-2_1_3_1">
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_3_2" class="outline-5">
+<h5 id="sec-2_1_3_2"><a href="https://github.com/bmaland/happyblogger">https://github.com/bmaland/happyblogger</a> </h5>
+<div class="outline-text-5" id="text-2_1_3_2">
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_3_3" class="outline-5">
+<h5 id="sec-2_1_3_3"><a href="http://orgmode.org/worg/org-tutorials/org-jekyll.html">http://orgmode.org/worg/org-tutorials/org-jekyll.html</a> </h5>
+<div class="outline-text-5" id="text-2_1_3_3">
+
+</div>
+
+</div>
+
+<div id="outline-container-2_1_3_4" class="outline-5">
+<h5 id="sec-2_1_3_4"><span class="todo TODO"> TODO</span> - <span class="timestamp-wrapper"> <span class="timestamp">2011-04-28 Thu 15:49</span></span><a href="http://www.emacswiki.org/emacs/org-blog.el">http://www.emacswiki.org/emacs/org-blog.el</a> check this out - </h5>
+<div class="outline-text-5" id="text-2_1_3_4">
+
+
+
+
+
+
+
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+<p class="footnote"><sup><a class="footnum" name="fn.1" href="#fnr.1">1</a></sup> <a href="http://pages.github.com/">http://pages.github.com/</a> - Home page for Github pages
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div id="postamble">
+<p class="date">Date: 2011-05-03 Tue</p>
+<p class="author">Author: TeAmigo</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+</div>
+</div>
+</body>
+</html>
