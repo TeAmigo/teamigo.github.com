@@ -1,0 +1,41 @@
+#horiznav, #horiznav ul{/*remove the bullets from the dropdown ul as well*/
+margin:0;
+padding:0;
+list-style-type:none;
+height:32px
+}
+
+#horiznav li{
+float:left;
+width:152px;
+position:relative/*set position:relative as the start point for absolutely positioning the dropdown*/
+}
+
+#horiznav li a{
+display:block;
+width:150px;
+line-height:30px;
+text-align:center;
+color:white;
+text-decoration:none;
+background-color:#EA9531;
+border:1px solid white
+}
+
+#horiznav li a:hover{
+color:#333333
+}
+
+#horiznav li ul{
+display:none;/*hide the dropdown*/
+position:absolute;/*position it absolutely..*/
+left:0;/*...align the left edge with the left edge of the parent li...*/
+top:32px/*...and 32px down from the top - 30px height + 2px for the border*/
+}
+
+#horiznav li:hover ul {
+display:block/*display the ul when the parent li is hovered*/
+}
+
+#horiznav li ul a{
+background-color:#FFB33B/*give the dropdown a different background colour*/
